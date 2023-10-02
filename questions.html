@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+
+
+    <div class="container">
+        <div class="questions-index row justify-content-around">
+            <div
+                class="questions-home  col-xs-1 col-sm-1 col-md-1 col-lg-1 text-dark-emphasis p-4 fw-lighter align-items-center h-25 fixed-top position-relative">
+                <button class="mb-3">
+                    <h6 class="text-dark-emphasis"><i class="fa-solid fa-house me-2" style="color: #000000;"></i>Home
+                    </h6>
+                </button>
+                <ul class="list-unstyled text-dark-emphasis mb-3">
+                    <h6>Global</h6>
+                    <li class="mb-2"><a href=""
+                            class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
+                                class="fa-regular fa-comment me-2"
+                                style="color: #000000;"></i><small>Sorular</small></a></li>
+                    <li class="mb-2"><a href=""
+                            class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
+                                class="fa-solid fa-tags me-2" style="color: #000000;"></i><small>Etiketler</small></a>
+                    </li>
+                    <li class="mb-2"><a href=""
+                            class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
+                                class="fa-solid fa-users me-2"
+                                style="color: #000000;"></i><small>Kullanıcılar</small></a></li>
+                </ul>
+                <ul class="list-unstyled text-dark-emphasis mb-3 ">
+                    <h6>Gruplar</h6>
+                    <li class="ms-3"><a href="" class="text-decoration-none text-dark-emphasis">
+                            <p>Grupları Keşfet</p>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="questions col-xs-10 col-sm-10 col-md-9 col-lg-6">
+                <div
+                    class=" row justify-content-around border border-top-0 border-end-0 border-secondary-subtle border-start-0 p-4">
+                    <div class="d-flex flex-column">
+                        <h3>Bütün Sorular</h3>
+                        <p>x adet soru</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-around">
+                        <form action="POST" class="row mb-3 mt-3">
+                            <input type="search" placeholder="Soru Sor" class="col-xs-12 col-md-10">
+                            <button class="btn btn-dark  col-md-2 mt-2">Gönder</button>
+                        </form>
+
+
+                        <div class="d-flex flex-row justify-content-between mt-3">
+                            <div class="questions-cards row">
+                                <button class="questions-buttons p-1  col-1">Yeni</button>
+                                <button class="questions-buttons p-1  col-1">Aktif</button>
+                                <button class="questions-buttons p-1  col-1">Ödüllendirilmiş</button>
+                                <button class="questions-buttons p-1  col-1">Cevaplanmamış</button>
+
+                                <div class="dropdown questions-buttons p-1 col-1">
+                                    <button class=" border-0 bg-transparent dropdown-toggle h-100 fw-lighter"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Daha Fazla
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Öne Çıkanlar</a></li>
+                                        <li><a class="dropdown-item" href="#">Cevaplanmamış
+                                                <small>(Etiketlerim)</small></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="questions-buttons p-1  col-1">Filtrele</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-around p-2 border border-top-0 border-end-0">
+                    <div class="col-xs-12 col-sm-12 text-center col-xs-12 col-sm-4 col-md-4 col-lg-3">
+                        <ul class="list-unstyled row align-items-center h-100">
+                            <li class=""><small>0 Oy</small></li>
+                            <li class=""><small>0 Cevap</small></li>
+                            <li class=""><small>0 Görüntüleme</small></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 justify-content-around">
+                        <div class="d-flex flex-column justify-content-around">
+                            <h5 class="h5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, doloribus!
+                            </h5>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus sit nesciunt
+                                molestias numquam atque itaque rem nihil quos provident odio.</p>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-xs-3 col-3">
+                                <button class="btn btn-info">
+                                    Lorem.
+                                </button>
+                            </div>
+                            <div class="row">
+                            <a href="" class="text-decoration-none col-xs-12 col-12">Lorem, ipsum.</a>
+                            </div>
+                            <div class="col-xs-2 col-9 w-100">
+                                <div class="row float-end">
+                                    
+                                    <p class="float-end col-xs-6 col-6">x soru</p>
+                                    <p class="float-end col-xs-6 col-6">x saniye önce</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-9 col-lg-3 align-items-center mt-4 ms-3">
+                <div class="right-side-question d-flex flex-column">
+
+                    <div class="card mb-4">
+                        <div>
+                            <h5 class="card-header text-bg-warning fs-6">The Overflow Blog</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="list-group-item"><small>Behind the scenes with OverflowAI Search</small></p>
+                        </div>
+                        <h5 class="card-header text-bg-warning fs-6">Featured on Meta</h5>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush list-unstyled">
+
+                                <li class=""><small>If more users could vote, would they engage more? Testing 1
+                                        reputation
+                                        voting...</small></li>
+                                <li class=""><small>Alpha test for short survey in banner ad slots starting on week
+                                        of
+                                        September...</small></li>
+                                <li class=""><small>Temporary policy: Generative AI (e.g., ChatGPT) is
+                                        banned</small>
+                                </li>
+                                <li class=""><small>Collectives Updates to the Community Bulletin in the Right
+                                        Sidebar</small>
+                                </li>
+                                <li class=""><small>OverflowAI Search is now available for alpha testing (September
+                                        13,
+                                        2023)</small>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="card-header text-bg-warning fs-6">
+                                Hot Meta Posts
+                            </h5>
+                        </div>
+                        <div class="card-body">
+
+                            <small>How could this question be updated to meet community guidelines?</small>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div>
+                            <h6 class="card-header mb-2 text-body-secondary">Custom Filters</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Create a Custom Filters</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-4">
+                        <div class="card-header mb-2 text-center ">
+                            <h6>Watched Tags</h6>
+                        </div>
+                        <div class="card-body">
+                            <i class="fa-brands fa-searchengin fa-2xl"></i>
+                            <p class="card-text">Watch tags to curate your list of questions.</p>
+                            <button class="btn btn-info">Watch a tag</button>
+
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 d-flex justify-content-center">
+                        <div class="card-header mb-2 text-center ">
+                            <h6>Ignore Tags</h6>
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-info">Add an ignore tag</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h6>Collectives</h6>
+                        <a href="">sea all</a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item ">
+                            <div class="d-flex justify-content-between">
+                                <small> <i class="fa-brands fa-google me-2"></i>Google Clouds</small>
+                                <button class="btn btn-outline-primary">join</button>
+                            </div>
+                            <small class="fs-6 fw-lighter">Google Cloud provides organizations with leading
+                                infrastructure,
+                                platform capabilities </small>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fa-brands fa-aws me-2"></i> AWS</small>
+                                <button class="btn btn-outline-primary">join</button>
+                            </div>
+                            <small class="fs-6 fw-lighter">Amazon Web Services (AWS) is the world’s most
+                                comprehensive
+                                and
+                                broadly
+                                adopted</small>
+                        </li>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fa-solid fa-language  me-2"></i> NLP</small>
+                                <button class="btn btn-outline-primary">join</button>
+                            </div>
+                            <small class="fs-6 fw-lighter">A collective focused on NLP (natural language
+                                processing),
+                                the
+                                transformation or extraction of
+                                useful information from natural language
+                            </small>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script src="https://kit.fontawesome.com/2a77d4b6e2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>
