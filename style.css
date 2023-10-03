@@ -333,5 +333,143 @@ a:hover {
 }
 
 
+/* Profile ksıım */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.profile-top img {
+    width: 100px;
+    height: 100px;
+}
+
+.left-nav {
+    width: 10%;
+    position: static;
+
+}
+
+.left-nav button {
+    margin-top: 1rem;
+    width: 85%;
+    font-size: 0.7rem;
+    background-color: transparent;
+
+}
+
+.title button {
+    width: min-content;
+    height: fit-content;
+}
+
+.right-content{
+    width: 75%;
+}
+
+.right-content button {
+    font-size: 0.8rem;
+}
+
+.profile-d button {
+    font-size: 0.8rem;
+}
+
+.dropdown{
+    display: none;
+}
+
+.title{
+    font-size:8vw
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#cardsty{
+    display: flex;
+    
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .dropdown{
+        display: block;
+    }
+
+    .left-nav{
+        display: none;
+    }
+    .right-content{
+        width: 100%;
+    }
+    .cardsty{
+        display: flex !important;
+    }
+
+    #cardsty{
+        flex-direction: column;
+    }
+
+    #cardt{
+        width: 100%;
+    }
+
+    #kapsayici{
+        flex-direction: column !important;
+    }
+    
+    #sol{
+        width: 100% !important;
+
+    }
+    #sag{
+        width: 100% !important;
+
+    }
+    #profile-btn{
+        width: 100% !important;
+    }
+
+    #profile-btn button{
+        font-size: 12px;
+    }
+    .profile-top img{
+        width: 140px;
+    }
+
+    .kapsayici2{
+        flex-direction: column !important;
+    }
+
+    .sol2{
+        width: 100% !important;
+    }
+
+    .sag2{
+        width: 100% !important; 
+    }
+
+    .right-content{
+        width: 100% !important;
+    }
+
+    .div{
+        font-size: 15px;
+    }
+
+
+
+}
+
+
+
+/* Profile Kısım biter */
 
 
