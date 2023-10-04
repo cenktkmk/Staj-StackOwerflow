@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 
-
+#search{
+    width: 800px;
+}
 
 .search-icon{
     background-image: url();
@@ -23,7 +25,9 @@
     background-color: #CDE9FE;
 }
 
-
+.container{
+    height: 2000px;
+}
 
 .arka-plan1{
     background: linear-gradient(white, rgb(245, 209, 143));
@@ -196,7 +200,9 @@
     background-color: #CDE9FE;
 }
 
-
+.container{
+    height:2000px;
+}
 
 .fs-7{
     font-size: 12px;
@@ -242,8 +248,9 @@ a:hover {
 
  /* ! Register */
 
-.questions-home{
+ .questions-home{
     border-radius: 10%;
+    width: 20%;
     
 }
 
@@ -279,7 +286,7 @@ a:hover {
     border: 0px;
     border-right: 1px solid black;
     background-color: transparent;
-    width: fit-content;
+    /* width: fit-content; */
     text-align: center;
 
 
@@ -290,11 +297,13 @@ a:hover {
 }
 
 
+.questions-cards{
+    border: 1px solid black;
+    border-radius: 5px;
+}
 
 
-.text-responsive {
-    font-size: calc(100% + 0.1vw + 0.1vh);
-  }
+
 
 
 
@@ -333,143 +342,70 @@ a:hover {
 }
 
 
-/* Profile ksıım */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
 
-
-.profile-top img {
-    width: 100px;
-    height: 100px;
-}
-
-.left-nav {
-    width: 10%;
-    position: static;
-
-}
-
-.left-nav button {
-    margin-top: 1rem;
-    width: 85%;
-    font-size: 0.7rem;
-    background-color: transparent;
-
-}
-
-.title button {
-    width: min-content;
-    height: fit-content;
-}
-
-.right-content{
-    width: 75%;
-}
-
-.right-content button {
-    font-size: 0.8rem;
-}
-
-.profile-d button {
-    font-size: 0.8rem;
-}
-
-.dropdown{
-    display: none;
-}
-
-.title{
-    font-size:8vw
-}
-
-.card-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-#cardsty{
-    display: flex;
-    
-}
-
-
-@media only screen and (max-width: 1100px) {
-    .dropdown{
-        display: block;
-    }
-
-    .left-nav{
-        display: none;
-    }
-    .right-content{
-        width: 100%;
-    }
-    .cardsty{
-        display: flex !important;
-    }
-
-    #cardsty{
+@media screen and (max-width: 1024px){
+    .content-register{
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
-    #cardt{
-        width: 100%;
+    .sign-up-form{
+        width: 75% !important;
     }
 
-    #kapsayici{
-        flex-direction: column !important;
-    }
-    
-    #sol{
-        width: 100% !important;
-
-    }
-    #sag{
-        width: 100% !important;
-
-    }
-    #profile-btn{
+    .list-items-register{
         width: 100% !important;
     }
-
-    #profile-btn button{
-        font-size: 12px;
-    }
-    .profile-top img{
-        width: 140px;
-    }
-
-    .kapsayici2{
-        flex-direction: column !important;
-    }
-
-    .sol2{
-        width: 100% !important;
-    }
-
-    .sag2{
-        width: 100% !important; 
-    }
-
-    .right-content{
-        width: 100% !important;
-    }
-
-    .div{
-        font-size: 15px;
-    }
+} 
 
 
-
+.btn-mavi{
+    background-color: rgb(0, 0, 104) !important;
 }
 
+.px-6{
+    padding-inline: 10% !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1 !important;
+}
 
+.yazi-rengi{
+    color: rgb(185, 184, 184);
+}
 
-/* Profile Kısım biter */
+.logo-hover:hover{
+    transition: 0.7s all;
+    transform: scaleX(1) translateY(.9em);
+}
 
+.düzenleme{
+    width: 1300px;
+    height: 150px;
+    margin: auto;
+    
+}
 
+.mb-0{
+    bottom: 10px;
+}
+
+.text-gri{
+    color: rgb(214, 214, 214);
+}
+
+.w-40{
+    width: 35%;
+}
+
+.arka-plan-ayar{
+    border: 1px solid;
+    height: 700px;
+    width: 95% !important;
+    background-color: rgb(58, 58, 129);
+}
+
+.mt-6{
+    margin-top: 150px;
+}

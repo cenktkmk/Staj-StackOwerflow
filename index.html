@@ -25,17 +25,30 @@
 <body>
     
     <!-- * Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-6">
         <div class="container-fluid width">
             <li class="nav-item dropdown list-unstyled">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-bars"></i>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item fw-bold fs-7" href="#">Home</a></li>
+                  <span class="text-secondary-emphasis fs-7 d-block px-3 mt-2">PUBLIC</span>
+                  <a class="text-decoration-none text-black px-3 " href="#"><i class="fa-solid fa-earth-americas text-decoration-none text-black px-1 fs-7"></i>Questions</a>
+                  <li><a class="px-5 text-decoration-none text-black fs-7" href="#">Tags</a></li>
+                  <li><a class="px-5 text-decoration-none text-black fs-7" href="#">Users</a></li>
+                  <li><a class="px-5 text-decoration-none text-black fs-7" href="#">Compaines</a></li>
+                  <li><span class="px-2 fs-7">COLLECTIVES</span><i class="fa-solid fa-circle-info float-end px-2"></i></li>
+                  <li><i class="fa-regular fa-star px-2" style="color: #d1740a;"></i><a href="#" class="px-2 fs-7 text-decoration-none text-black">Explore Collectives</a></li>
+                  <br>
+                  <li><span class="px-2 fs-7">LABS</span><i class="fa-solid fa-circle-info float-end px-2"></i></li>
+                  <li><i class="fa-solid fa-message px-1" style="color: #707070;"></i><a class="text-decoration-none text-black px-1" href="#">Discussions</a><i class="fa-solid fa-arrow-up-right-from-square px-1" style="color: #595959;"></i>  </li>
+                  <br>
+                  <span class="text-secondary-emphasis fs-7 d-block px-3 mt-2">TEAMS</span> <br>
+                  <p class="fs-7 text-center px-3"><span class="fw-bold">Stack Overflow for Teams –</span> <br> Start collaborating and sharing organizational knowledge.</p>
+                  <img class="px-5" src="navbar-img.svg" alt="">
+                  <a href="#" class="btn btn-orange w-30 m-4 text-white">Create a free Team</a>
+                  <a href="#" class="btn btn-outline-secondary w-30 m-4 mt-0 text-black border-0">Why Teams?</a>
                 </ul>
               </li>
           <a class="navbar-brand" href="#">
@@ -59,7 +72,7 @@
             </ul>
             <form class="d-flex" role="search">
               <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-secondary" type="submit">
+              <button class="btn btn-outline-secondary me-2" type="submit">
                 <a target="_blank" class="text-decoration-none text-black" href="login.html">Log in</a>
               </button>
               <button class="btn btn-primary" type="submit">
@@ -304,10 +317,10 @@
 
          <!-- * 4lü satın alma bölümü -->
 
-         <div class="containers renk px-5">
+         <div class="containers renk px-5 pt-5">
           <div class="row py m-auto">
             <div class="col-lg-3">
-              <div class="card text-center w-75">
+              <div class="card text-center">
                 <div class="card-header bg-white yükseklik1">
                   <button class="btn btn-orange text-white">Free</button> <br> <br>
                   <h2 class="fw-bold">Free</h2>
@@ -323,7 +336,7 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="card text-center w-75">
+              <div class="card text-center">
                 <div class="card-header bg-white yükseklik1">
                   <button class="btn btn-secondary text-white">Basic</button> <br> <br>
                   <h2 class="fw-bold">$6.50 USD</h2>
@@ -340,7 +353,7 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="card text-center w-75">
+              <div class="card text-center">
                 <div class="card-header bg-white yükseklik1">
                   <button class="btn btn-dark text-white">Business</button> <br> <br>
                   <h2 class="fw-bold">$13.50 USD</h2>
@@ -359,16 +372,19 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="card text-center w-75">
+              <div class="card text-center yükseklik">
                 <div class="card-header bg-white yükseklik1">
-                  <button class="btn btn-orange text-white">Free</button> <br> <br>
-                  <h2 class="fw-bold">Free</h2>
-                  <span class="text-dark-emphasis">No credit card required</span>
+                  <button class="btn btn-mavi text-white">Enterprise</button> <br> <br>
+                  <h2 class="fw-bold">Custom pricing</h2>
+                  <span class="text-dark-emphasis">Let's talk about what you need</span>
                 </div>
                 <div class="card-body yükseklik">
-                  <p class=""><i class="fa-solid fa-bullhorn p-2"></i>ChatOps integrations - Slack & Microsoft Teams</p>
-                  <p><i class="fa-solid fa-shield p-2"></i>Your own private space hosted on stackoverflowteams.com</p>
-                  <p><i class="fa-solid fa-box-archive p-2"></i>Structured and searchable knowledge base</p> <br> <br> <br>
+                  <p class="text-dark-emphasis"><i class="fa-regular fa-plus px-1" style="color: #828282;"></i>Premium features of Business plus…</p>
+                  <p><i class="fa-solid fa-user-group fa-flip-horizontal px-1"></i>Unlimited Teams within your instance</p>
+                  <p><i class="fa-sharp fa-solid fa-mountain-sun px-1"></i>Flexible hosting options — cloud or on-premises</p>
+                  <p><i class="fa-solid fa-angle-left"></i><i class="fa-solid fa-angle-right px-1"></i>Robust read and write API</p>
+                  <p><i class="fa-solid fa-circle-question px-1"></i>Your own customer success and community building representative</p>
+                  <p><i class="fa-solid fa-square-plus px-1"></i>99.5% uptime SLA and priority support</p>
                   <a href="#" class="btn btn-orange px-5 text-white m-3">Create a free Team</a>
                   <span class="text-dark-emphasis d-block px-2">Always free up to 50 teammates</span>
                 </div>
@@ -376,98 +392,211 @@
             </div>
           </div>
          </div>
-         
-         </div>
 
-         <!-- Footer -->
-
-         <footer class="footer d-flex flex-row me-5 w-100 text-light justify-content-lg-around mt-5">
-          <div class="w-75 d-flex flex-row me-5 justify-content-around pt-4 pb-4">
-              <div class="footer-left d-flex flex-row justify-content-between">
-                  <div>
-                      <ul class="list-unstyled">
-                          <h2 class="fs-6"><a href="" class="text-light">STACK OVERFLOW</a></h2>
-                          <li class=""><a href="">Questions</a></li>
-                          <li><a href="">Help</a></li>
-                      </ul>
-                  </div>
-                  <div>
-  
-                      <ul class="list-unstyled">
-                          <h2 class="fs-6"><a href="" class="text-light">PRODUCTS</a></h2>
-                          <li><a href="">Teams</a></li>
-                          <li><a href="">Advertising</a></li>
-                          <li><a href="">Collectives</a></li>
-                          <li><a href="">Talent</a></li>
-                      </ul>
-                  </div>
-                  <div>
-                      <ul class="list-unstyled">
-                          <h2 class="fs-6"><a href="" class="text-light">COMPANY</a></h2>
-                          <li><a href="">About</a></li>
-                          <li><a href="">Press</a></li>
-                          <li><a href="">Work Here</a></li>
-                          <li><a href="">Legal</a></li>
-                          <li><a href="">Privacy Policy</a></li>
-                          <li><a href="">Terms of Service</a></li>
-                          <li><a href="">Contact Us</a></li>
-                          <li><a href="">Cookie Settings</a></li>
-                          <li><a href="">Cookie Policy</a></li>
-                      </ul>
-                  </div>
-                  <div>
-                      <ul class="list-unstyled">
-                          <h2 class="fs-6"><a href="" class="text-light">STACK EXCHANGE NETWORK</a></h2>
-                          <li><a href="">Technology</a></li>
-                          <li><a href="">Culture & recreation</a></li>
-                          <li><a href="">Life & arts</a></li>
-                          <li><a href="">Science</a></li>
-                          <li><a href="">Professional</a></li>
-                          <li><a href="">Business</a></li>
-                          <li><a href="">API</a></li>
-                          <li><a href="">Data</a></li>
-                      </ul>
-                  </div>
+         <div class="containers renk ">
+          <div class="row">
+            <div class="col-lg-3 mt-5 uzunluk">
+              <div class="card text-center px-5 m-5 p-2 bg-dark border-secondary">
+                <div class="card-text text-white">
+                  A Forrester Consulting study shows <span class="text-primary fw-bold">191% return on investment</span> with Stack Overflow for Teams.
+                </div>
               </div>
-              <div class="footer-right d-flex flex-column justify-content-between">
-                  <ul class="d-flex flex-row justify-content-between list-unstyled">
-                      <li class=""><a href="">Facebook</a></li>
-                      <li class=""><a href="">Twitter</a></li>
-                      <li class=""><a href="">Lindkedin</a></li>
-                      <li class=""><a href="">İnstagram</a></li>
-                  </ul>
-  
-                  <small class="text-secondary">
-                      Site design / logo © 2023 Stack Exchange Inc; user contributions licensed under CC BY-SA. rev
-                      2023.9.25.43646
-                  </small>
+            </div>
+            <div class="col-lg-3 mt-5">
+              <div class="card text-center px-5 m-5 p-2 bg-dark border-secondary">
+                <div class="card-text text-white">
+                  The world’s largest telecom firm <span class="text-primary fw-bold">saved $10M</span> in deflected support cases with our centralized knowledge.
+                </div>
               </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+              <div class="card text-center px-5 m-5 p-2 bg-dark border-secondary">
+                <div class="card-text text-white">
+                  Subject-matter experts at software platform Unqork had <span class="text-primary fw-bold">27% more time</span> to work on projects after using Teams.
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+              <div class="text-center w-75 p-2 mt-4 bg-dark border-secondary">
+                <p class="btn btn-secondary">You can save time and money with Stack Overflow for Teams. <br>
+                <a href="#" class="btn btn-outline-primary w-30 m-4 text-primary">Calcute your ROI</a>
+                </p>
+              </div>
+            </div>
           </div>
-      </footer>
+        </div>
 
+        <div class="row renk m-auto">
+          <div class="col-lg-4">
+            <div class="">
+              <img width="350px" class="d-block" src="img/illo-integrations-left.png" alt="foto">
+              <img width="20rem" src="img/microsoft-teams-png.png" alt="foto">
+              <span class="text-white microsoft">Microsoft Teams</span>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-5">
+            <h2 class="text-white">Integrates with and improves other tools</h2>
+            <p class="yazi-rengi">All plans come with integrations for ChatOps tools <a class="text-decoration-none" href="#">Slack</a> & <a class="text-decoration-none" href="#">Microsoft Teams</a> in order to cut down on pings, limit distractions and make the tools even more powerful. Business and Enterprise customers get access to Jira, GitHub & Okta integrations.</p>
+            <img class="p-2 rounded-4 btn logo-hover" width="74rem" src="img/slack_app_tips.jpg" alt="">
+            <img class="p-2 rounded-4 btn logo-hover" width="65rem" src="img/microsoft-teams-png.png" alt="">
+            <img class="p-2 rounded-4 btn logo-hover" width="65rem" src="img/github.png" alt="">
+            <img class="p-2 rounded-4 btn logo-hover" height="65rem" width="75rem" src="img/jira.jpg" alt="">
+            <img class="p-2 rounded-4 btn logo-hover" width="65rem" src="img/okta.png" alt=""> <br> <br> <br> <br>
+            <p class="yazi-rengi">Some of the premium features available with paid tiers</p>
+          </div>
+          <div class="col-lg-4">
+            <p class="text-white"><img width="35rem" src="slack.png" alt="">Slack</p>
+            <img width="380px" src="img/illo-integrations-right.png" alt="">
+          </div>
+        </div>
          
+      </div>
+
+   <div class="container h-100">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div data-aos="zoom-in-up">
+        <div class="card p-4 bg-dark-subtle">
+          <div class="card-body text-center">
+            <h5 class="card-title fs-1"><i class="text-primary-emphasis fa-solid fa-key"></i></h5>
+            <p class="card-text fs-5">Robust read and write API</p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div data-aos="zoom-in-up">
+        <div class="card p-4 bg-dark-subtle">
+          <div class="card-body text-center">
+            <h5 class="card-title fs-1"><i class="text-primary-emphasis fa-solid fa-lock"></i></h5>
+            <p class="card-text fs-5">Single sign-on with AD or SAML</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div data-aos="zoom-in-up">
+        <div class="card p-4 bg-dark-subtle">
+          <div class="card-body text-center">
+            <h5 class="card-title fs-1"><i class="text-primary-emphasis fa-solid fa-people-group"></i></h5>
+            <p class="card-text fs-5">Your own customer success representative</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div data-aos="zoom-in-up">
+        <div class="card p-4 bg-dark-subtle">
+          <div class="card-body text-center">
+            <h5 class="card-title fs-1"><i class="text-primary-emphasis fa-solid fa-headset"></i></h5>
+            <p class="card-text fs-5">99.5% uptime SLA and priority support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-lg-3">
+      <div class="card border-white mb-3" style="max-width: 18rem;">
+        <div class="bg-transparent border-black"><i class="fs-1 text-primary mx-3 fa-solid fa-quote-right"></i></div>
+        <div class="card-body text-black">
+          <p class="card-text">Stack Overflow for Teams has been a resource for our entire company. Not only for developers to solve problems, it’s also enabled our sales field to answer technical questions that help them close deals.</p>
+        </div>
+        <div class="card-footer bg-transparent border-dark-subtle">
+          <p class=""><span class="fw-bold">Director of Product Management</span> <br> Microsoft</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="card border-white mb-3" style="max-width: 18rem;">
+        <div class="bg-transparent border-black"><i class="fs-1 text-primary mx-3 fa-solid fa-quote-right"></i></div>
+        <div class="card-body text-black">
+          <p class="card-text">Stack Overflow for Teams has been a resource for our entire company. Not only for developers to solve problems, it’s also enabled our sales field to answer technical questions that help them close deals.</p>
+        </div>
+        <div class="card-footer bg-transparent border-dark-subtle">
+          <p class=""><span class="fw-bold">Director of Product Management</span> <br> Microsoft</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="card border-white mb-3" style="max-width: 18rem;">
+        <div class="bg-transparent border-black"><i class="fs-1 text-primary mx-3 fa-solid fa-quote-right"></i></div>
+        <div class="card-body text-black">
+          <p class="card-text">Stack Overflow for Teams has been a resource for our entire company. Not only for developers to solve problems, it’s also enabled our sales field to answer technical questions that help them close deals.</p>
+        </div>
+        <div class="card-footer bg-transparent border-dark-subtle">
+          <p class=""><span class="fw-bold">Director of Product Management</span> <br> Microsoft</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="card border-white mb-3" style="max-width: 18rem;">
+        <div class="bg-transparent border-black"><i class="fs-1 text-primary mx-3 fa-solid fa-quote-right"></i></div>
+        <div class="card-body text-black">
+          <p class="card-text">Stack Overflow for Teams has been a resource for our entire company. Not only for developers to solve problems, it’s also enabled our sales field to answer technical questions that help them close deals.</p>
+        </div>
+        <div class="card-footer bg-transparent border-dark-subtle">
+          <p class=""><span class="fw-bold">Director of Product Management</span> <br> Microsoft</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
+  <div class="row">
+    <img class="w-25 m-auto" src="img/stack.png" alt="">
+    <h2 class="text-center mt-5">Additional products that reach and engage <br> developers & technologists…</h2>
+    <div class="col-lg-6 col-sm-12 mt-5">
+      <div class="card w-75 mb-3 border-white shadow m-auto">
+        <div class="card-body">
+          <h5 class="card-title text-center"><img width="50rem" src="img/logo.png" alt=""><span class="text-gri">|</span> ADVERTISING</h5>
+          <p class="card-text text-center text-dark-emphasis">Reach the world's largest audience of developers and technologists</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12 mt-5">
+      <div class="card w-75 mb-3 border-white shadow m-auto">
+        <div class="card-body">
+          <h5 class="card-title text-center"><img width="50rem" src="img/logo.png" alt=""><span class="text-gri">|</span> COLLECTIVES</h5>
+          <p class="card-text text-center text-dark-emphasis">Connecting communities with the specific technologies they use the most</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mt-5">
+      <div class="card w-40 mb-3 border-white shadow m-auto">
+        <div class="card-body">
+          <h5 class="card-title text-center"><img width="50rem" src="img/logo.png" alt=""><span class="text-gri">|</span> TALENT</h5>
+          <p class="card-text text-center text-dark-emphasis">Build your employer brand</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn btn-orange text-white w-25 m-auto mt-5">About the company</a>
+    <p class="text-center mt-3 text-dark-emphasis">Want to work here? <a class="text-decoration-none" href="#">Current job openings</a></p>
+  </div>
 
+   </div>
 
+   <div class="container-fluid mt-5 arka-plan-ayar">
+    <div class="col-lg-4 mt-6">
+      <div data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+        <img width="150px" src="img/ask-different.png" alt="">
+        <img width="70px" src="img/unix-linux.png" alt="">
+      </div>
+      <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <img class="m-5" width="70px" src="img/artifical-intelligence.png" alt="">
+        <img class=" btn" width="70px" src="img/software-engineer.png" alt="">
+      </div>
+      <div data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+        <img width="150px" src="img/ask-ubuntu.png" alt="">
+        <img width="70" src="img/salesforce.png" alt="">
+      </div>
+    </div>
+   </div>
+   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
     <!-- ! AOS JS CDN -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
