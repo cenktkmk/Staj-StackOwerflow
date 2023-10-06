@@ -33,6 +33,9 @@
     background: linear-gradient(white, rgb(208, 208, 253));
 }
 
+.body-arka{
+    background-color: #232629;
+}
 
 
 .renk{
@@ -70,22 +73,7 @@
 
 /* * Login sayfası */
 
-.header {
-    text-align: center;
-}
 
-.content {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    font-size: 80%;
-}
-
-.login {
-    text-align: center;
-}
 
 .button-container{
 
@@ -100,16 +88,10 @@
 }
 
   
-  #login-form label {
-    display: block;
-    font-style: normal;
-    font-size: large;
-    border-radius: 5px;
-    
-}
+
   
   #login-form input {
-    width: 100%;
+
 
     border-radius: 8px;
 
@@ -148,9 +130,6 @@
 
 
 
-.center-text{
-    text-align: center;
-}
 
 .container1{
     margin: auto;
@@ -215,10 +194,6 @@
 }
 
 
-.questions-cards{
-    border: 1px solid black;
-    border-radius: 5px;
-}
 
 
 
@@ -311,6 +286,8 @@
 
     background-color: rgb(58, 58, 129);
 }
+
+
 
 /* Profile ksıım */
 * {
