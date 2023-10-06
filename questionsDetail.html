@@ -46,76 +46,87 @@
                 </ul>
             </div>
             <div class="questions col-xs-10 col-sm-10 col-md-9 col-lg-6">
-                <div
-                    class=" row justify-content-around border border-top-0 border-end-0 border-secondary-subtle border-start-0 p-4">
-                    <div class="d-flex flex-column">
-                        <h3>Bütün Sorular</h3>
-                        <p>x adet soru</p>
+                <div class="titleTop d-flex justify-content-between row flex-column-reverse flex-md-row">
+                    <div class="col-md-6">
+                        <a class="text-decoration-none text-dark fs-3 m-3" href="#">Java getResource return null</a>
                     </div>
-                    <div class="d-flex flex-column justify-content-around">
-                        <form action="POST" class="row mb-3 mt-3">
-                            <input type="search" placeholder="Soru Sor" class="col-xs-12 col-md-10">
-                            <button class="btn btn-dark  col-md-2 mt-2">Gönder</button>
-                        </form>
-
-
-                        <div class="d-flex flex-row justify-content-between mt-3">
-                            <div class="questions-cards row ">
-                                <button class="questions-buttons p-1  col-1">Yeni</button>
-                                <button class="questions-buttons p-1  col-1">Aktif</button>
-                                <button class="questions-buttons p-1  col-1">Ödüllendirilmiş</button>
-                                <button class="questions-buttons p-1  col-1">Cevaplanmamış</button>
-
-                                <div class="dropdown questions-buttons p-1 col-lg-1">
-                                    <button class=" border-0 bg-transparent dropdown-toggle h-100 fw-lighter"
-                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Daha Fazla
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Öne Çıkanlar</a></li>
-                                        <li><a class="dropdown-item" href="#">Cevaplanmamış
-                                                <small>(Etiketlerim)</small></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button class="questions-buttons p-1  col-1">Filtrele</button>
-                            </div>
-                        </div>
+                    <div class="col-md-6 text-end">
+                        <button type="button" class="btn btn-primary mt-3">Ask Question</button>
                     </div>
                 </div>
-                <div class="row justify-content-around p-2 border border-top-0 border-end-0">
-                    <div class="col-xs-12 col-sm-12 text-center col-xs-12 col-sm-4 col-md-4 col-lg-3">
-                        <ul class="list-unstyled align-items-center h-50 row justify-content-around">
-                            <li class=""><small>0 Oy</small></li>
-                            <li class=""><small>0 Cevap</small></li>
-                            <li class=""><small>0 Görüntüleme</small></li>
-                        </ul>
+                <div class="titleBottom">
+                    <span class="m-3 mt-5 fs-6">Asked today</span>
+                    <span class="m-3 mt-5">Modified today</span>
+                    <span class="m-3 mt-5">Viewed 10 times</span>
+            
+                </div>
+                <hr>
+                <div class="row m-3">
+                    <div class="col-1 d-flex flex-column align-items-center">
+                        <button type="button" class="btn btn-light border border-2 rounded-5"><i
+                                class="fs-1 fa-solid fa-caret-up"></i></button>
+                        <span class="m-3 fs-4">0</span>
+                        <button type="button" class="btn btn-light border border-2 rounded-5"><i
+                                class="fa-solid fa-caret-up fa-rotate-180 fs-1"></i></button>
+                        <button type="button" class="btn btn-light m-3"><i
+                                class="fs-4 fa-sharp fa-regular fa-bookmark"></i></button>
+                        <a href=""><i class="fa-solid fa-clock-rotate-left text-dark "></i></a>
                     </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 justify-content-around">
-                        <div class="d-flex flex-column justify-content-around">
-                            <h5 class="h5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, doloribus!
-                            </h5>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus sit nesciunt
-                                molestias numquam atque itaque rem nihil quos provident odio.</p>
-                        </div>
-                        <div class="row justify-content-between">
-                            <div class="col-xs-3 col-3">
-                                <button class="btn btn-info">
-                                    Lorem.
-                                </button>
+                    <div class="col-11">
+                        <p>I use CSSUtils.class.getResource("/css").toExternalForm() + fileName to get a file from resource and it
+                            works well inside intellij. But when I convert it to .exe file, CSSUtils.class.getResource("/css")
+                            returns null value</p>
+                        <a href=""
+                            class="fs-6 text-decoration-none card-subtitle mb-2 text-muted bg-info d-inline p-1 border border-info rounded-3">javascript</a>
+                        <div class="questionDetail mt-5 d-flex justify-content-between row">
+                            <div class="linkContainer col-md-9">
+                                <a class="text-decoration-none text-dark text-muted" href="">Share</a>
+                                <a class="text-decoration-none text-dark text-muted" href="">Edit</a>
+                                <a class="text-decoration-none text-dark text-muted" href="">Follow</a>
                             </div>
-                            <div class="row">
-                            <a href="" class="text-decoration-none col-xs-12 col-12">Lorem, ipsum.</a>
-                            </div>
-                            <div class="col-xs-2 col-9 w-100">
-                                <div class="row float-end">
-                                    
-                                    <p class="float-end col-xs-6 col-6">x soru</p>
-                                    <p class="float-end col-xs-6 col-6">x saniye önce</p>
+                            <div class="profileContainer col-md-3 d-flex justify-content-end">
+                                <div class="w-50 profile bg-info p-2 d-inline ">
+                                    <p>asked 7 mins ago</p>
+                                    <img class="w-25"
+                                        src="./michael-schumacher-of-germany-and-mercedes-gp-walks-in-the-news-photo-1694018155.jpg"
+                                        alt="">
+            
+                                    <span><a href="">username</a></span>
+                                    <div>rating</div>
                                 </div>
                             </div>
+            
                         </div>
+                        <a class="text-decoration-none text-dark text-muted" href="">Add a comment</a>
                     </div>
+                </div>
+            
+                <h6 class="m-3">Related questions</h6>
+                <div class="related p-3">
+                    <div class="relatedObject p-3 border border-2">
+                        <span class="bg-success p-2 me-3 rounded-3 text-light">3432</span> <a class="text-decoration-none"
+                            href="">Is Java "pass-by-reference" or "pass-by-value"</a>
+                    </div>
+                    <div class="relatedObject  p-3 border border-2">
+                        <span class="bg-success p-2 me-3 rounded-3 text-light">3432</span> <a class="text-decoration-none"
+                            href="">Is Java "pass-by-reference" or "pass-by-value"</a>
+                    </div>
+                    <div class="relatedObject  p-3 border border-2">
+                        <span class="bg-success p-2 me-3 rounded-3 text-light">3432</span> <a class="text-decoration-none"
+                            href="">Is Java "pass-by-reference" or "pass-by-value"</a>
+                    </div>
+                    <a class="d-flex justify-content-center text-decoration-none" href="">Load more question</a>
+                </div>
+            
+                <div class="pageBottom p-3 ">
+                    <p>Know someone who can answer? Share a link to this <a class="text-decoration-none" href="">question</a> via <a
+                            class="text-decoration-none" href="">email, </a><a class="text-decoration-none" href="">Twitter</a> or
+                        <a class="text-decoration-none" href="">Facebook</a> </p>
+                    <h5>Your Answer</h5>
+                    <textarea class="w-100" name="answer" id="answer" cols="30" rows="10"></textarea>
+                    <button type="button" class="btn btn-primary mt-3">Post Your Answer</button>
+                    <p class="mt-4">Browse other questions tagged <a class="bg-info p-1 text-decoration-none" href="">tags</a> or <a
+                            class="text-decoration-none" href="">ask your own question.</a></p>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-9 col-lg-3 align-items-center mt-4 ms-3">
