@@ -12,7 +12,9 @@ urlpatterns = [
     path("questions", questions, name="questions"),
     path("questions/Detail", questionDetails, name="questionDetails"),
     path("tags", tags, name="tags"),
-    path("users", users, name="users")
+    path("users", users, name="users"),
+    path("login", login, name="login"),
+    path("register", register, name="register"),
 
 
 
