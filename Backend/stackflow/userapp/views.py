@@ -27,3 +27,11 @@ def tags(request):
 def users(request):
     
     return render (request, 'users.html')
+
+def login(request):
+    
+    return render (request, 'login.html')
+
+def register(request):
+    
+    return render (request, 'register.html')
