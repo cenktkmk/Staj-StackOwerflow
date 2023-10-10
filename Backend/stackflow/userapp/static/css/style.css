@@ -64,6 +64,9 @@
         flex-wrap: wrap;
 
     }
+    .profile-top{
+        display: block !important;
+    }
 }
     
 
