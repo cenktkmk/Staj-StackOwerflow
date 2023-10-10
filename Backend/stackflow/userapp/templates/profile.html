@@ -8,9 +8,9 @@ Profile
 
 
 <div class="row">
-   {% include "./components/_question.html" %}
+    {% include "./components/_questions.html" %}
     <div class="profile col-10">
-        <div class="profile-top d-flex justify-content-between w-100">
+        <div class="profile-top d-flex justify-content-between">
             <div class="d-flex p-1">
                 <img class="rounded " src="./photo-1554050857-c84a8abdb5e2.jpg" alt="profileimg">
                 <div class="username">
@@ -40,28 +40,27 @@ Profile
             <button class="btn btn-light rounded-pill">Settings</button>
         </div>
 
+        <div class="dropdown1">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Menu
+            </button>
+            <ul class="dropdown-menu">
+                <li><button class="btn btn-light rounded-pill">Summary</button> </li>
+                <li><button class="btn btn-light rounded-pill">Answers</button></li>
+                <li><button class="btn btn-light rounded-pill">Questions</button></li>
+                <li><button class="btn btn-light rounded-pill">Tags</button></li>
+                <li><button class="btn btn-light rounded-pill">Articles</button></li>
+                <li><button class="btn btn-light rounded-pill">Badges</button></li>
+                <li><button class="btn btn-light rounded-pill">Following</button></li>
+                <li><button class="btn btn-light rounded-pill">Bounties</button></li>
+                <li><button class="btn btn-light rounded-pill">Reputation</button></li>
+                <li><button class="btn btn-light rounded-pill">All actions</button></li>
+                <li><button class="btn btn-light rounded-pill">Responses</button></li>
+                <li><button class="btn btn-light rounded-pill">Votes</button></li>
+            </ul>
+        </div>
         <div class="profile-main d-flex w-100">
-            <div class="dropdown1"> 
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Menu
-                </button>
-                <ul class="dropdown-menu">
-                    <li><button class="btn btn-light rounded-pill">Summary</button> </li>
-                    <li><button class="btn btn-light rounded-pill">Answers</button></li>
-                    <li><button class="btn btn-light rounded-pill">Questions</button></li>
-                    <li><button class="btn btn-light rounded-pill">Tags</button></li>
-                    <li><button class="btn btn-light rounded-pill">Articles</button></li>
-                    <li><button class="btn btn-light rounded-pill">Badges</button></li>
-                    <li><button class="btn btn-light rounded-pill">Following</button></li>
-                    <li><button class="btn btn-light rounded-pill">Bounties</button></li>
-                    <li><button class="btn btn-light rounded-pill">Reputation</button></li>
-                    <li><button class="btn btn-light rounded-pill">All actions</button></li>
-                    <li><button class="btn btn-light rounded-pill">Responses</button></li>
-                    <li><button class="btn btn-light rounded-pill">Votes</button></li>
-                </ul>
-            </div>
-
             <div class="left-nav">
 
                 <ul class="list-unstyled sticky-top" id="leftbuttons">
