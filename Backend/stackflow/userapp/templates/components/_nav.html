@@ -1,4 +1,7 @@
 <!-- * Navbar Start -->
+
+{% load static %}
+
 <nav class="navbar navbar-expand-lg  bg-body-tertiary px-6">
     <li class="nav-item dropdown list-unstyled">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -29,7 +32,7 @@
     </li>
 
     <a class="navbar-brand" href="#">
-        <img class="rounded-5" width="50rem" src="img/logo.png" alt="">
+        <img class="rounded-5" width="50rem" src="{% static 'img/logo.png' %}" alt="">
         stack<p class="fw-bold d-inline">overflow</p>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
