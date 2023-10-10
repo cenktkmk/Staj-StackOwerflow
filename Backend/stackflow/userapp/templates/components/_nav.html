@@ -7,20 +7,20 @@
         <ul class="dropdown-menu">
             <button class="mb-3  border-0 bg-transparent">
                 <h6 class="text-dark-emphasis"><i class="fa-solid fa-house me-2" style="color: #000000;"></i><a
-                        href="./index.html" class="text-decoration-none text-black">Home</a>
+                        href="{% url 'home' %}" class="text-decoration-none text-black">Home</a>
                 </h6>
             </button>
             <ul class="list-unstyled text-dark-emphasis mb-3">
                 <h6>Global</h6>
-                <li class="mb-2"><a href="#"
+                <li class="mb-2"><a href="{% url 'questions' %}"
                         class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
                             class="fa-regular fa-comment me-2" style="color: #000000;"></i><small>Sorular</small></a>
                 </li>
-                <li class="mb-2"><a href="#"
+                <li class="mb-2"><a href="{% url 'tags' %}"
                         class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
                             class="fa-solid fa-tags me-2" style="color: #000000;"></i><small>Etiketler</small></a>
                 </li>
-                <li class="mb-2"><a href="#"
+                <li class="mb-2"><a href="{% url 'users' %}"
                         class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
                             class="fa-solid fa-users me-2" style="color: #000000;"></i><small>Kullanıcılar</small></a>
                 </li>
@@ -51,10 +51,10 @@
         <form class="d-flex" role="search">
             <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-secondary me-2" type="submit">
-                <a target="_blank" class="text-decoration-none text-black" href="./login.html">Login</a>
+                <a target="_blank" class="text-decoration-none text-black" href="{% url 'login' %}">Login</a>
             </button>
             <button class="btn btn-primary" type="submit">
-                <a target="_blank" class="text-decoration-none text-black" href="./register.html">SignUp</a>
+                <a target="_blank" class="text-decoration-none text-black" href="{% url 'register' %}">SignUp</a>
             </button>
         </form>
     </div>
