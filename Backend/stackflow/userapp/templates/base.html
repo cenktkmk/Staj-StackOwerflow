@@ -6,12 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
+
         {% block title %}
 
         {% endblock title %}
     </title>
     <!-- ! AOS CSS CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Leb1JIoAAAAAE1NT4vNiA6kVYIEWSI_MXREx-C6"></script>
+
 
 
     <!-- ! Animate CSS CDN -->
@@ -46,6 +49,20 @@
     {% include "./components/_footer.html" %}
     <!-- ! AOS JS CDN -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6Leb1JIoAAAAAE1NT4vNiA6kVYIEWSI_MXREx-C6', {action: 'LOGIN'});
+            // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+            // reCAPTCHA Enterprise to the end user's browser.
+            // This token must be validated by creating an assessment.
+            // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
+          });
+        }
+        </script>
 
     <script>
         AOS.init();

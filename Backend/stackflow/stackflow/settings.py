@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "userapp",
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -101,6 +102,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 LANGUAGE_CODE = 'tr-Tr'
@@ -115,15 +118,25 @@ USE_TZ = True
 
 import os
 STATIC_URL = 'static/'
-MEDIA_URL=""
-MEDIA_ROOT=os.path.join(BASE_DIR,"Images")
+MEDIA_URL="/static/"
+MEDIA_ROOT=os.path.join(BASE_DIR,"static")
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
 
+AUTH_USER_MODEL="userapp.CustomUser"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# reCAPTCHA settings
+RRECAPTCHA_PUBLIC_KEY = '6Leb1JIoAAAAAE1NT4vNiA6kVYIEWSI_MXREx-C6'
+RECAPTCHA_PRIVATE_KEY = '6Leb1JIoAAAAANbGGqklUzTRLNkNbCfUr0kVQ5l4'
+
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
+

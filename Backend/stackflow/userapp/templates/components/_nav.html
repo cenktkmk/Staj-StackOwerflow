@@ -48,15 +48,18 @@
                 <a class="nav-link" href="#">ForTeams</a>
             </li>
         </ul>
+        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+        {% if request.user.is_authenticated%}
+        <a href="{% url 'logout' %}" class="btn btn-dark">Logout</a>
+        <a href="{% url 'profile' %}"></a>
+        {% else %}
         <form class="d-flex" role="search">
-            <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-secondary me-2" type="submit">
-                <a target="_blank" class="text-decoration-none text-black" href="./login.html">Login</a>
-            </button>
-            <button class="btn btn-primary" type="submit">
-                <a target="_blank" class="text-decoration-none text-black" href="./register.html">SignUp</a>
-            </button>
+            <a target="_blank" class="text-decoration-none text-black btn" href="{% url 'login' %}">Login</a>
+            <a target="_blank" class="text-decoration-none text-black btn btn-primary"
+                href="{% url 'register' %}">SignUp</a>
         </form>
+        {% endif %}
     </div>
 </nav>
 <!-- ! Navbar Bitiş -->
