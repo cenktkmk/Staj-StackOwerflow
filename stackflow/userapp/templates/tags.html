@@ -1,0 +1,109 @@
+
+{% extends "base.html" %}
+{% block title %}Tags{% endblock title %}
+{% block content %}
+
+
+
+
+    <div class="tagsContainer row p-5">
+        
+        {% include "./components/_questions.html" %}
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="tagsDescriptions">
+            <h1>Tags</h1>
+            <p>A tag is a keyword or label that categorizes your question with other, similar questions. Using the right
+                tags makes it easier for others to find and answer your question.</p>
+            <a class="text-decoration-none" href="#">Show all tag synonyms</a>
+        </div>
+        <div class="mt-3 tagsFilterContainer row justify-content-between">
+            <div class="input-group mb-3 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text h-100" id="basic-addon1"><i
+                            class="fa-solid fa-magnifying-glass h-100"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Filter by tag name" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="filterRight col-xs-12 col-sm-6 col-md-5 col-lg-4 mb-3">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="tagObjectsContainer row">
+
+        
+            <div class="card col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" >
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted bg-info d-inline p-1 border border-info rounded-3">javascript</h6>
+                    <p class="card-text mt-3">For questions about programming in ECMAScript (JavaScript/JS) and its different
+                        dialects/implementations (except for ActionScript). Note that JavaScript is NOT Java. Include
+                        all tags that are relevant…</p>
+                        <p class="card-text">2513978 questions</p>
+                    <a href="#" class="card-link">297 asked today,</a>
+                    <a href="#" class="card-link">1737 this week</a>
+                </div>
+            </div>
+
+
+            <div class="card  col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted bg-info d-inline p-1 ">javascript</h6>
+                    <p class="card-text mt-3">For questions about programming in ECMAScript (JavaScript/JS) and its different
+                        dialects/implementations (except for ActionScript). Note that JavaScript is NOT Java. Include
+                        all tags that are relevant…</p>
+                    <a href="#" class="card-link">297 asked today,</a>
+                    <a href="#" class="card-link">1737 this week</a>
+                </div>
+            </div>
+
+
+            <div class="card  col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted bg-info d-inline p-1 ">javascript</h6>
+                    <p class="card-text mt-3">For questions about programming in ECMAScript (JavaScript/JS) and its different
+                        dialects/implementations (except for ActionScript). Note that JavaScript is NOT Java. Include
+                        all tags that are relevant…</p>
+                    <a href="#" class="card-link">297 asked today,</a>
+                    <a href="#" class="card-link">1737 this week</a>
+                </div>
+            </div>
+
+
+            <div class="card  col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted bg-info d-inline p-1 ">javascript</h6>
+                    <p class="card-text mt-3">For questions about programming in ECMAScript (JavaScript/JS) and its different
+                        dialects/implementations (except for ActionScript). Note that JavaScript is NOT Java. Include
+                        all tags that are relevant…</p>
+                    <a href="#" class="card-link">297 asked today,</a>
+                    <a href="#" class="card-link">1737 this week</a>
+                </div>
+            </div>
+
+
+            <div class="card  col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted bg-info d-inline p-1 ">javascript</h6>
+                    <p class="card-text mt-3">For questions about programming in ECMAScript (JavaScript/JS) and its different
+                        dialects/implementations (except for ActionScript). Note that JavaScript is NOT Java. Include
+                        all tags that are relevant…</p>
+                    <a href="#" class="card-link">297 asked today,</a>
+                    <a href="#" class="card-link">1737 this week</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    {% endblock content %}
