@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}
+Register Page
+{% endblock title %}
+
+{% block content %}
+
+<div class="content-register row justify-content-around">
+    <div class="list-items-register d-none d-md-block d-lg-block d-xl-block d-sm-block col-md-5 col-lg-4">
+        <ul class=" d-flex flex-column list-unstyled">
+            <h2 class="mb-4">Join the Stack Overflow community</h2>
+            <li class="d-flex flex-row align-items-center"><i class="fa-solid fa-comment fa-xl me-2 mb-4"
+                    style="color: #000000;"></i>
+                <p>Takıldığınız bir yer var ise — soru sorabilirsiniz</p>
+            </li>
+            <li class="d-flex flex-row align-items-center"><i class="fa-regular fa-thumbs-up fa-xl me-2 mb-4"
+                    style="color: #000000;"></i>
+                <p>Beğenme ve yorum yapma gibi yeni ayrıcalıkları açın.</p>
+            </li>
+            <li class="d-flex flex-row align-items-center"><i class="fa-solid fa-tag fa-xl me-2 mb-4"
+                    style="color: #050505;"></i>
+                <p>Favori sorularınızı ve cevaplarınızı kaydedin, etiketleri izleyin ve daha fazlasını yapın.</p>
+            </li>
+            <li class="d-flex flex-row align-items-center"><i class="fa-solid fa-award fa-xl me-2 mb-4"
+                    style="color: #000000;"></i>
+                <p>İtibar ve rozetler kazanın.</p>
+            </li>
+        </ul>
+
+    </div>
+    <div class="sign-up-form col-xs-7 col-md-5 col-lg-4">
+        <div class="d-flex flex-column ">
+            <button id="w-google" class="sign-up rounded-5 bg-light"><i class="fa-brands fa-google me-2"
+                    style="color: #030303;"></i>Google ile Kayıt ol</button>
+            <button id="w-github" class="sign-up rounded-5 bg-black text-light"><i class="fa-brands fa-github me-2"
+                    style="color: #ffffff;"></i>GitHub ile Kayıt ol</button>
+            <button id="w-facebook" class="sign-up rounded-5 bg-primary text-light"><i
+                    class="fa-brands fa-facebook me-2" style="color: #ffffff;"></i>Facebook ile Kayıt ol</button>
+        </div>
+        <form class="form-register bg-white p-4 rounded-5" action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group mb-lg-4">
+                <label for="username">Kullanıcı Adı</label>
+                <input type="text" class="form-control" id="username" placeholder="Kullanıcı Adı" name="display_name">
+            </div>
+            <div class="form-group mb-lg-4">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Email Giriniz" name="email">
+            </div>
+            <div class="form-group mb-lg-4">
+                <label for="exampleInputPassword1">Şifre</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Şifre"
+                    name="password">
+            </div>
+
+            <div class="form-check mb-4">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1"><small>
+                        Ara sıra ürün güncellemeleri, kullanıcı araştırma davetleri, şirket duyuruları ve özetlerini
+                        almak için izin verin.</small></label>
+            </div>
+            <button type="submit" class="btn btn-primary text-center w-100 mb-4">Kayıt Ol</button>
+            <small class="fw-lighter">
+                "Kaydol" düğmesine tıkladığınızda, hizmet şartlarımızı kabul etmiş olursunuz ve gizlilik politikamızı
+                ile davranış kurallarımızı okuyup anladığınızı onaylarsınız.</small>
+        </form>
+        <div class="text-center mt-3">
+            <small>Zaten hesabın var mı? <a href=""><b>Giriş Yap</b></a></small>
+        </div>
+    </div>
+</div>
+{% endblock content %}

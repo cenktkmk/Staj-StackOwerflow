@@ -1,0 +1,67 @@
+<!-- * Navbar Start -->
+<nav class="navbar navbar-expand-lg  bg-body-tertiary px-6">
+    <li class="nav-item dropdown list-unstyled">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <ul class="dropdown-menu">
+            <button class="mb-3  border-0 bg-transparent">
+                {% if request.user.is_authenticated %}
+                <h6 class="text-dark-emphasis"><i class="fa-solid fa-house me-2" style="color: #000000;"></i> <a href='questions' class="text-decoration-none text-dark-emphasis">Home</a>
+                </h6>
+                {% else %}
+                <h6 class="text-dark-emphasis"><i class="fa-solid fa-house me-2" style="color: #000000;"></i> <a href="{% url 'home' %}" class="text-decoration-none text-dark-emphasis"    >Home</a>
+                </h6>
+                {% endif %}
+            </button>
+            <ul class="list-unstyled text-dark-emphasis mb-3">
+                <h6>Global</h6>
+                <li class="mb-2"><a href='questions'
+                        class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
+                            class="fa-regular fa-comment me-2" style="color: #000000;"></i><small>Sorular</small></a>
+                </li>
+                <li class="mb-2"><a href='tags'
+                        class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
+                            class="fa-solid fa-tags me-2" style="color: #000000;"></i><small>Etiketler</small></a>
+                </li>
+                <li class="mb-2"><a href='users'
+                        class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
+                            class="fa-solid fa-users me-2" style="color: #000000;"></i><small>Kullanıcılar</small></a>
+                </li>
+            </ul>
+        </ul>
+    </li>
+
+    <a class="navbar-brand" class=""
+    {% if request.user.is_authenticated %} href="{% url 'questions' %}" {% else %} href="{% url 'home' %}" {% endif %}>
+        <img class="rounded-5" width="50rem" src="img/logo.png" alt="">
+        stack<p class="fw-bold d-inline">overflow</p>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+        {% if request.user.is_authenticated%}
+        
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img  class="rounded" src="{{user.avatar.url}}" alt="" width="30px" height="30px">
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+              <li><a href="{% url 'logout' %}" class="dropdown-item">Logout</a></li>
+            </ul>
+          </div>
+        {% else %}
+        <form class="d-flex" role="search">
+            <a target="_blank" class="text-decoration-none text-black btn" href="{% url 'login' %}">Login</a>
+            <a target="_blank" class="text-decoration-none text-black btn btn-primary"
+                href="{% url 'register' %}">SignUp</a>
+        </form>
+        {% endif %}
+    </div>
+</nav>
+<!-- ! Navbar Bitiş -->
