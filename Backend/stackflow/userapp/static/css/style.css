@@ -432,3 +432,12 @@
 
 
 /* Profile Kısım biter */
+
+#text {
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+#text.hidden {
+    opacity: 0;
+}

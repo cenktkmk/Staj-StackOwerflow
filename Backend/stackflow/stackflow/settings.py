@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "userapp",
-    'captcha',
+    "profileApp",
+    'ckeditor',
+
 ]
 
 MIDDLEWARE = [
@@ -118,25 +120,29 @@ USE_TZ = True
 
 import os
 STATIC_URL = 'static/'
-MEDIA_URL="/img/"
-MEDIA_ROOT=os.path.join(BASE_DIR,"img")
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
 
-AUTH_USER_MODEL="userapp.CustomUser"
+AUTH_USER_MODEL="profileApp.CustomUser"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# reCAPTCHA settings
-RRECAPTCHA_PUBLIC_KEY = '6Leb1JIoAAAAAE1NT4vNiA6kVYIEWSI_MXREx-C6'
-RECAPTCHA_PRIVATE_KEY = '6Leb1JIoAAAAANbGGqklUzTRLNkNbCfUr0kVQ5l4'
-
-SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', 'Link', 'Unlink'],
+        ],
+    }
+}

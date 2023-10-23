@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import logout, authenticate, login
 from .models import *
+from .form import CreatePost
 
 
 from django.contrib import messages
@@ -11,14 +12,18 @@ def index(request):
     return render(request, 'index.html')
 
 
-def profile(request):
+def profile(request, user_uuid):
+    user = get_object_or_404(CustomUser, user_uuid=user_uuid)
 
     return render(request, 'profile.html', {'user': request.user})
 
-
 def questions(request):
-
-    return render(request, 'questions.html')
+    sorular = Post.objects.all()
+    context = {}
+    context["sorular"] = sorular
+   
+    
+    return render(request, 'questions.html', context)
 
 
 def questionDetails(request):
@@ -33,53 +38,28 @@ def tags(request):
 
 def users(request):
 
-    return render(request, 'users.html')
+    user = CustomUser.objects.all()
 
+    context= {
+        
+        "user":user
+    }
 
-def Login(request):
-    
-    error_message = None
-
-    if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-
-        # Authenticate the user
-        user = authenticate(request, email=email, password=password)
-
-        if user is not None:
-            login(request, user)  # Use Django's login function
-
-            return redirect('questions')  # Replace with your success URL
-        else:
-            error_message = "Invalid username or password. Please try again."
-
-    return render(request, 'login.html', {'error_message': error_message})
-
-def cikis(request):
-    
-    logout(request)
-    return redirect('home')
+    return render(request, 'users.html', context)
 
 
 
-def register(request):
-    if request.method == 'POST':
-        email = request.POST.get('email')
-        display_name = request.POST.get('display_name')
-        password = request.POST.get('password')
+def createpost(request):
+    context = {}
+    if request.method == "POST":
+        form = CreatePost(request.POST)
+        if form.is_valid():
+            postform = form.save(commit=False)
+            postform.user = request.user
+            postform.save()
 
-        if email and display_name and password:
-            user = CustomUser.objects.create(
-                email=email,
-                display_name=display_name,
-                is_active=True  # You might want to set this to True if you want users to be active upon registration
-            )
-            user.set_password(password)
-            user.save()
+            return redirect("questions")
+    else:
+        context["form"] = CreatePost
 
-            # Optionally, log in the user here
-
-            return redirect('login')  # Replace with your success URL
-
-    return render(request, 'register.html')
+        return render(request, "createPost.html", context)    
