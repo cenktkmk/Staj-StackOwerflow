@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}
+Hesap Ayarları
+
+{% endblock title %}
+
+
+
+
+{% block content %}
+
+<div class="row ">
+    {% include "./components/_questions.html" %}
+    <div class="profile col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+        {% include "./components/profile-top.html" %}
+
+
+        <div class="edit-profile">
+            <form action="{% url 'edit_profile' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="border rounded p-3">
+                    <div class="profile-image mb-2">
+                        <p><b>Profile image</b></p>
+                        <img src="{{user.avatar.url}}" class="rounded" alt="" width="150" height="150">
+                    </div>
+                    <div class=" mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile01" name="avatar">    
+                    </div>  
+                    <div class=" mb-3 ">
+                        <label for="mas">Kullanıcı Adı</label>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" name="display_name" placeholder="{{user.display_name}}">
+                    </div>
+                    <div class=" mb-3">
+                        <span  id="inputGroup-sizing-default">Location</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" name="location" placeholder="{{user.location}}">
+                    </div>
+                    <div class=" mb-3">
+                        <span id="inputGroup-sizing-default">Title</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" name="title" placeholder="{{user.title}}">
+                    </div>
+                    <div class=" mb-4">
+                        <span>About me</span>
+                        <textarea class="form-control" aria-label="With textarea" name="about_me">{{user.about_me}}</textarea>
+                    </div>
+                </div>
+                <h3 class="mt-3">Links</h3>
+                <div class="links border rounded mt-3 row p-3">
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="input-group mb-3">
+                            <div>
+                                <p>Website link</p>
+                            </div>
+                            <div class="input-group ">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-link"></i></span>
+                                <input type="text" class="form-control" aria-describedby="basic-addon1" value="{{user.website}}" name="website">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 col-xs-12">
+                        <div class="input-group mb-3">
+                            <div>
+                                <p>Twitter link or username</p>
+                            </div>
+                            <div class="input-group  ">
+                                <span class="input-group-text" id="basic-addon1"><i
+                                        class="fa-brands fa-twitter"></i></span>
+                                <input type="text" class="form-control" aria-describedby="basic-addon1" value="{{user.twitter}}" name="twitter">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 col-xs-12">
+                        <div class="input-group mb-3">
+                            <div>
+                                <p>Github link or username</p>
+                            </div>
+                            <div class="input-group ">
+                                <span class="input-group-text" id="basic-addon1"><i
+                                        class="fa-brands fa-github"></i></span>
+                                <input type="text" class="form-control" aria-describedby="basic-addon1" value="{{user.github}}" name="github">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary" type="submit">Save Profile</button>
+                    <a href="" class="btn text-danger ">Cancel</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    
+</div> 
+
+{% endblock content %}
+

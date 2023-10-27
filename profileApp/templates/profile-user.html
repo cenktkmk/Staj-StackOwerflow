@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}
+{{user.display_name}}
+{% endblock title %}
+
+{% block content %}
+<div class="row justify-content-center">
+    {% include "./components/_questions.html" %}
+
+    <div class="profile-top d-flex justify-content-center col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-8 col-xxl-8">
+        <div class="row d-flex justify-content-center align-items-center ">
+
+
+            <div class=" justify-content-center align-items-center p-4">
+                <div class="row text-black">
+                    <div
+                        class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 justify-content-center align-items-center">
+                        <img src="{{user.avatar.url}}" alt="{{user.display_name}}"
+                            class="img-fluid rounded-3 h-100 w-100">
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-5 col-xxl-5">
+                        <h5 class="mb-1">{{user.display_name}}</h5>
+                        <p class="mb-2 pb-1" style="color: #2b2a2a;">Senior Journalist</p>
+                        <div class="row row-cols-2 d-flex justify-content-around rounded-3 p-2 mb-2"
+                            style="background-color: #efefef;">
+                            <div class="col">
+                                <p class="small  mb-1">Sorular</p>
+                                <p class="mb-0">41</p>
+                            </div>
+                            <div class="col">
+                                <p class="small  mb-1">Rozetler</p>
+                                <p class="mb-0">13</p>
+                            </div>
+                            <div class="col">
+                                <p class="small  mb-1">Takipçi</p>
+                                <p class="mb-0">{{followers_count}}</p>
+                            </div>
+                            <div class="col">
+                                <p class="small  mb-1">Rating</p>
+                                <p class="mb-0">8.5</p>
+                            </div>
+                        </div>
+                        {% if user_to_display != request.user %}
+                        {% with button_class=is_following|yesno:"danger,primary" %}
+                        <form method="post"
+                            action="{% if is_following %}{% url 'unfollow' user_to_display.user_uuid %}{% else %}{% url 'follow' user_to_display.user_uuid %}{% endif %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-{{ button_class }}">
+                                {% if is_following %}Takipten Çık{% else %}Takip Et{% endif %}
+                            </button>
+                        </form>
+                        {% endwith %}
+
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="col-md-12 col-xl-8 ">
+        <div>
+            <span>About</span>
+            <div class="rounded-3 p-5" style="background-color: #efefef;">
+                <div class="d-flex  justify-content-center fw-lighter">
+                    <p>{% if not user.about_me %}
+                        Düzenleniyor...
+                        {% else %}
+                        {{user.about_me}}
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span>Badges</span>
+            <div class="rounded-3 p-4" style="background-color: #efefef;">
+                <div class="d-flex justify-content-center fw-lighter">
+                    {% if badges %}
+                        You have earned the following badges:
+                        <ul class="row">
+                            {% for badge in badges %}
+                                
+                                <li class="col-2">
+                                    <strong>{{ badge.title }}</strong>
+                                    <p>{{ badge.description }}</p>
+                                    <img src="{{ badge.image.url }}"  class="w-75" alt="{{ badge.title }} Badge">
+                                </li>
+        
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        You have not earned any <a href="#">badges</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
