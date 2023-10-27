@@ -1,0 +1,58 @@
+[
+    {
+        "model": "profileApp.badge",
+        "pk": 1,
+        "fields": {
+            "title": "Bronze Badge",
+            "description": "Nice Question",
+            "image": "badges/badge_bronze.jpg"
+        }
+    },
+    {
+        "model": "profileApp.badge",
+        "pk": 2,
+        "fields": {
+            "title": "Silver Badge",
+            "description": "Good Question",
+            "image": "badges/badge_silver.jpg"
+        }
+    },
+    {
+        "model": "profileApp.badge",
+        "pk": 3,
+        "fields": {
+            "title": "Gold Badge",
+            "description": "Awasome Question",
+            "image": "badges/badge_gold.jpg"
+        }
+    },
+    {
+        "model": "profileApp.badge",
+        "pk": 4,
+        "fields": {
+            "title": "Bronze Badge",
+            "description": "Nice Answer",
+            "image": "badges/badge_bronze.jpg"
+        }
+    },
+    {
+        "model": "profileApp.badge",
+        "pk": 5,
+        "fields": {
+            "title": "Silver Badge",
+            "description": "Good Answer",
+            "image": "badges/badge_silver.jpg"
+        }
+    },
+    {
+        "model": "profileApp.badge",
+        "pk": 6,
+        "fields": {
+            "title": "Gold Badge",
+            "description": "Awasome Answer",
+            "image": "badges/badge_gold.jpg"
+        }
+    }
+]
+
+

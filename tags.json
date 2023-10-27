@@ -1,0 +1,58 @@
+[
+    {
+        "model": "userapp.tags",
+        "pk": 1,
+        "fields":{
+            "tagler": "JavaScript",
+            "tagDescription": "Description for tags"
+        }
+    },
+    {
+        "model": "userapp.tags",
+        "pk": 2,
+        "fields":{
+            "tagler": "Pyhton",
+            "tagDescription": "Description for tags"
+        }
+    },
+    {
+        "model": "userapp.tags",
+        "pk": 3,
+        "fields":{
+            "tagler": "Html",
+            "tagDescription": "Description for tags"
+        }
+    },
+    {
+        "model": "userapp.tags",
+        "pk": 4,
+        "fields":{
+            "tagler": "Css",
+            "tagDescription": "Description for tags"
+        }
+    },
+    {
+        "model": "userapp.tags",
+        "pk": 5,
+        "fields":{
+            "tagler": "Json",
+            "tagDescription": "Description for tags"
+        }
+    },
+    {
+        "model": "userapp.tags",
+        "pk": 6,
+        "fields":{
+            "tagler": "React",
+            "tagDescription": "Description for tags"
+        }
+    },
+    {
+        "model": "userapp.tags",
+        "pk": 7,
+        "fields":{
+            "tagler": "Bootstrap",
+            "tagDescription": "Description for tags"
+        }
+    }
+]
