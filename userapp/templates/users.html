@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Users{% endblock title %}
+
+{% block content %}
+        <div class="row">
+
+            {% include "./components/_questions.html" %}
+
+            <div
+                class="w-75 ms-5 mt-lg-3 d-flex flex-column border border-bottom-0 p-3 border-top-0 border-end-0 border-black">
+                <div class="row justify-content-center">
+                    <h3 class="col-12 mb-4">Kullanıcılar</h3>
+                    <div class="row justify-content-between mb-3">
+                        <form class="col-12 form-inline mb-3">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                        <div class="col-12 justify-content-between mt-2 ">
+                            <div class="questions-cards row">
+                                <button
+                                    class="questions-buttons col-xs-6 col-sm-3 col-md-3 col-lg-3">Reputation</button>
+                                <button class="questions-buttons col-xs-6 col-sm-3 col-md-3 col-lg-3">Yeni
+                                    Kullanıcılar</button>
+                                <button class="questions-buttons col-xs-6 col-sm-3 col-md-3 col-lg-3">Editörler</button>
+                                <button
+                                    class="questions-buttons col-xs-6 col-sm-3 col-md-3 col-lg-3">Moderatörler</button>
+
+
+
+                                <div class="col-6 ">
+                                    <div class=" d-flex flex-row ">
+                                        <button class="btn btn-light"><small>haftalık</small></button>
+                                        <button class="btn btn-light"><small>aylık</small></button>
+                                        <button class="btn btn-light"><small>yıllık</small></button>
+                                        <button class="btn btn-light"><small>tümü</small></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="">
+
+                    
+                    
+                    
+                    <div class="row mt-5">
+
+                        {% for users in user %}
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 p-2 justify-content-around">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href=""><img class="w-100 h-100" src="{{users.avatar.url}}" alt=""></a>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex w-100 flex-column">
+                                        <div class="d-flex flex-column">
+                                            <a href="{% url 'userProfile' users.user_uuid %}" class="text-decoration-none">{{users.display_name}}</a>
+                                            <p></p> 
+                                            <small>2,212</small>
+
+                                        </div>
+
+
+
+                                        <div>
+                                            <a href="{% url 'tags' %}" class="text-decoration-none">User.Tags</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="d-flex flex-row justify-content-between mt-5">
+                            <a href="" class="text-decoration-none">
+                                Haftalık / Aylık / Yıllık reputation ligi
+                            </a>
+                            <div>
+                                <button class="btn btn-dark">1</button>
+                                <button class="btn btn-dark">2</button>
+                                <button class="btn btn-dark">3</button>
+                                <button class="btn btn-dark">4</button>
+                                <button class="btn btn-dark">5</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+        {% endblock content %}

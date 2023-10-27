@@ -1,0 +1,24 @@
+ <div class="d-none d-md-block d-lg-block d-xl-block col-sm-2 col-md-2 col-lg-2 text-dark-emphasis p-4 fw-lighter align-items-center">
+        <button class="mb-3  border-0 bg-transparent">
+            {% if request.user.is_authenticated %}
+            <h6 class="text-dark-emphasis"><i class="fa-solid fa-house me-2" style="color: #000000;"></i> <a href="{% url 'questions' %}" class="text-decoration-none text-dark-emphasis">Home</a>
+            </h6>
+            {% else %}
+            <h6 class="text-dark-emphasis"><i class="fa-solid fa-house me-2" style="color: #000000;"></i> <a href="{% url 'home' %}" class="text-decoration-none text-dark-emphasis">Home</a>
+            </h6>
+            {% endif %}
+        </button>
+        <ul class="list-unstyled text-dark-emphasis mb-3">
+            <h6>Global</h6>
+            <li class="mb-2"><a href="{% url 'questions' %}"
+                    class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
+                        class="fa-regular fa-comment me-2" style="color: #000000;"></i><small>Sorular</small></a></li>
+            <li class="mb-2"><a href="{% url 'tags' %}"
+                    class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
+                        class="fa-solid fa-tags me-2" style="color: #000000;"></i><small>Etiketler</small></a>
+            </li>
+            <li class="mb-2"><a href="{% url 'users' %}"
+                    class="text-decoration-none text-dark-emphasis d-flex flex-row align-items-center"><i
+                        class="fa-solid fa-users me-2" style="color: #000000;"></i><small>Kullanıcılar</small></a></li>
+        </ul>
+    </div>
